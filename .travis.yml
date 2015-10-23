@@ -9,5 +9,8 @@ sudo: required  # for Caffe
 before_install:
     - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
     - export PATH=/home/travis/miniconda/bin:$PATH
+install:
+    - conda install --yes gevent greenlet
+
 script:
     nosetests -v --with-coverage
