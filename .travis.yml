@@ -12,7 +12,7 @@ before_install:
 install:
 #    - conda install --yes gevent greenlet
      - echo line 1
-     - travis_wait "(sleep 660 > tmp)"
+     - travis_wait time (sleep 660 > tmp)
      - echo line 2
 Script:
     nosetests -v --with-coverage
